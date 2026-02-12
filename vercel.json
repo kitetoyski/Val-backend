@@ -1,14 +1,15 @@
 {
-    "buildCommand": "npm run build",
-    "outputDirectory": "build",
-    "devCommand": "npm start",
-    "rewrites": [
-      { "source": "/api/(.*)", "destination": "/api/$1" },
-      { "source": "/(.*)", "destination": "/index.html" }
-    ],
-    "env": {
-      "MAILERSEND_API_KEY": "mlsn.5c767015573fdbfb78109562c29857b664078a4c5f45d95a78572683d5a45ec8",
-      "VERIFIED_SENDER_EMAIL": "MS_QK7cTU@test-2p0347zorn7lzdrn.mlsender.net",
-      "VERIFIED_SENDER_NAME": "Kirsten Eules Ramos"
+    "name": "valentine-backend",
+    "version": "1.0.0",
+    "description": "Valentine's Day email sender backend",
+    "main": "api/send-email.js",
+    "scripts": {
+      "vercel-build": "echo 'No build needed'"
+    },
+    "dependencies": {
+      "mailersend": "^1.4.0"
+    },
+    "engines": {
+      "node": "18.x"
     }
   }
