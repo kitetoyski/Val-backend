@@ -1,15 +1,15 @@
 {
-    "name": "valentine-backend",
-    "version": "1.0.0",
-    "description": "Valentine's Day email sender backend",
-    "main": "api/send-email.js",
-    "scripts": {
-      "vercel-build": "echo 'No build needed'"
-    },
-    "dependencies": {
-      "mailersend": "^1.4.0"
-    },
-    "engines": {
-      "node": "18.x"
-    }
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      }
+    ]
   }
